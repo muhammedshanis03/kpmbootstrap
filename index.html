@@ -1,269 +1,777 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KPM Group</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
     <style>
-      .c-item {
-          height: calc(100vh - 70px);
+        .c-item {
+            height: calc(100vh - 70px);
+
+        }
+
+        .c-image {
+            height: 80%;
+            object-fit: cover;
+        }
+    </style>
+
+<style>
+    .carousel-indicators {
+        bottom: -40px;
+        list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+    
+
+    .carousel-indicators li {
+        background-color: darkorange;
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        margin: 0 4px;
+    }
+
+    .carousel-indicators .active {
+        background-color: #333;
+    }
+</style>
+
+<style>
+    .trainer-container {
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      min-height: 600px;
+      border-radius: 10px;
+      overflow: hidden;
+      
+    }
+    .trainer-card {
+        height: 400px;
+        color: white;
+      border-radius: 10px;
+      width: 22%;
+    }
+      .all_section {
+        background-image: url('https://demo.gloriathemes.com/eventchamp/demo/wp-content/uploads/2018/11/section-2.jpg?id=699');
 
       }
 
-      .c-image {
-          height: 80%;
-          object-fit: cover;
-      }
+      .image-container {
+      background-image: url('path/to/your/background-image.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      min-height: 400px; 
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-around;
+    }
+    .image-card {
+      background: rgba(255, 255, 255, 0.8);
+      /* padding: 20px; */
+      border-radius: 10px;
+      width: 22%;
+    }
+    .footer {
+      background-color: #333;
+      color: white;
+      padding: 30px 0;
+    }
+    .footer-form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
 
-
+    .footer_request {
+        padding-left: 120px;
+    }
 
 
   </style>
 
 
-  </head>
+
+
+</head>
+
 <body>
 
 
     <!-- Nav bar -->
 
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-xxl">
-              <img src="https://www.kpmlearnings.com/wp-content/uploads/2019/09/kpm-website-logo.png" alt="">
-              
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-xxl">
+            <img src="https://www.kpmlearnings.com/wp-content/uploads/2019/09/kpm-website-logo.png" alt="">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav text-dark fw-bold">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">HOME</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      TRAININGS
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Professional Training Courses</a></li>
-                      <li><hr class="dropdown-divider"></li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            TRAININGS
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Professional Training Courses</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
 
-                      <li><a class="dropdown-item" href="#">In-house Training Courses</a></li>
-                      <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">In-house Training Courses</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
 
-                      <li><a class="dropdown-item" href="#">Public Training Courses</a></li>
-                      <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Public Training Courses</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
 
-                      <li><a class="dropdown-item" href="#">Conferences</a></li>
-                      <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Conferences</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
 
-                      <li><a class="dropdown-item" href="#">CXO Club</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">EVENTS</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      ABOUT US
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Advisory Partners</a></li>
-                      <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">CXO Club</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">EVENTS</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            ABOUT US
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Advisory Partners</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
 
-                      <li><a class="dropdown-item" href="#">Clients</a></li>
-                      <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Clients</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
 
-                      <li><a class="dropdown-item" href="#">Testimonials</a></li>
-                      <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Testimonials</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
 
-                      <li><a class="dropdown-item" href="#">Blogs</a></li>
-                      <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Blogs</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
 
-                      <li><a class="dropdown-item" href="#">Careers</a></li>
-                    </ul>
-                  </li>
+                            <li><a class="dropdown-item" href="#">Careers</a></li>
+                        </ul>
+                    </li>
 
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">GALLERY</a>
-                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">GALLERY</a>
+                    </li>
 
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">CONTACT US</a>
-                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CONTACT US</a>
+                    </li>
 
-                  
+
                 </ul>
-              </div>
             </div>
-          </nav>
+        </div>
+    </nav>
 
-      <!-- nav bar -->
+    <!-- nav bar -->
 
-   <!-- slid show effect "carousel" -->
+    <!-- slid show effect "carousel" -->
 
-      <div id="carouelmain" class="carousel slide carousel-fade">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouelmain" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouelmain" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouelmain" data-bs-slide-to="2"
-                aria-label="Slide 3"></button><br/>
-        </div> 
-        <div class="carousel-inner c-item">
-            <div class="carousel-item active">
-                <img src="https://www.kpmlearnings.com/wp-content/uploads/2019/11/maintenance-reliability-training-program-1920x1100.jpg" class=" w-80 c-image img-fluid" alt="carousel image 1">
-                <div class="carousel-caption d-none d-md-block c-image pt-5">
-                    <h1 class="fw-bold pt-5 pb-5">Virtual Training Program on Advanced Maintenance & Reliability Professional</h1>
-                    <h4 class="pb-4"><i class="pe-3 bi bi-calendar-check table-primary"></i>September, 2023</h4>
-                    <button type="button" class="btn btn-outline-warning text-light border-light rounded-5">Details</button>
+    <section>
+        <div id="carouelmain" class="carousel slide carousel-fade">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouelmain" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouelmain" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouelmain" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner c-item">
+                <div class="carousel-item active">
+                    <img src="https://www.kpmlearnings.com/wp-content/uploads/2019/11/maintenance-reliability-training-program-1920x1100.jpg"
+                        class=" w-100 c-image img-fluid opacity-75" alt="carousel image 1">
+                    <div class="carousel-caption c-image pt-5">
+                        <h1 class="fw-bold pt-5">Virtual Training Program on Advanced Maintenance & Reliability
+                            Professional</h1>
+                        <h4 class="pb-4"><i class="bi bi-calendar-check table-primary"></i>September, 2023</h4>
+                        <button type="button"
+                            class="btn btn-outline-warning text-light border-light rounded-5">Details</button>
 
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.kpmlearnings.com/wp-content/uploads/2019/11/maintenance-reliability-training-program-1920x1100.jpg"
+                        class=" w-100 c-image opacity-75" alt="carousel image 2">
+                    <div class="carousel-caption c-image pt-5">
+                        <h1 class="fw-bold pt-5 pb-5">Virtual Training Program on Certified Reliability Engineer</h1>
+                        <h4 class="pb-4"><i class="pe-3 bi bi-calendar-check table-primary"></i>October, 2023</h4>
+                        <button type="button"
+                            class="btn btn-outline-warning text-light border-light rounded-5">Details</button>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.kpmlearnings.com/wp-content/uploads/2018/11/slider-kpm-2-1920x1100.jpg"
+                        class=" w-100 c-image opacity-75" alt="carousel image 3">
+                    <div class="carousel-caption c-image">
+                        <h1 class="fw-bold pt-5 pb-5">Face-to-face Master Class on IRRBB (Interest Rate Risk in the
+                            Banking Book)</h1>
+                        <h4 class="pb-4"><i class="pe-3 bi bi-calendar-check table-primary"></i>November, 2023</h4>
+                        <button type="button"
+                            class="btn btn-outline-warning text-light border-light rounded-5">Details</button>
+                    </div>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img src="https://www.kpmlearnings.com/wp-content/uploads/2019/11/maintenance-reliability-training-program-1920x1100.jpg" class=" w-100 c-image" alt="carousel image 2">
-                <div class="carousel-caption d-none d-md-block c-image pt-5">
-                  <h1 class="fw-bold pt-5 pb-5">Virtual Training Program on Certified Reliability Engineer</h1>
-                  <h4 class="pb-4"><i class="pe-3 bi bi-calendar-check table-primary"></i>October, 2023</h4>
-                  <button type="button" class="btn btn-outline-warning text-light border-light rounded-5">Details</button>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouelmain" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouelmain" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <!-- slid show effect "carousel" -->
 
+
+    <!-- cards -->
+
+    <div class="d-flex justify-content-center pt-5 pb-5">
+        <h2 class="text-secondary-emphasis display-6 fw-bold">Upcoming <span class="text-warning">Events</span></h2>
+    </div>
+
+
+    <!-- cards -->
+
+
+    <section class="pt-5 container">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-6 text-right align-content-center">
+                    <a class="btn btn-warning mb-3 mr-1" href="#carouselExampleIndicators2" role="button"
+                        data-slide="prev">
+                        <i class="fa fa-arrow-left"></i>
+                    </a>
+                    <a class="btn btn-warning mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <img src="https://www.kpmlearnings.com/wp-content/uploads/2018/11/slider-kpm-2-1920x1100.jpg"
-                    class=" w-100 c-image" alt="carousel image 3">
-                <div class="carousel-caption d-none d-md-block c-image pt-5">
-                  <h1 class="fw-bold pt-5 pb-5">Face-to-face Master Class on IRRBB (Interest Rate Risk in the Banking Book)</h1>
-                  <h4 class="pb-4"><i class="pe-3 bi bi-calendar-check table-primary"></i>November, 2023</h4>
-                  <button type="button" class="btn btn-outline-warning text-light border-light rounded-5">Details</button>
+                <div class="col-12">
+                    <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card">
+                                            <img class="img-fluid" alt="100%x280"
+                                                src="https://www.kpmlearnings.com/wp-content/uploads/2019/11/maintenance-reliability-training-program-1130x650.jpg">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Virtual Live Program on Advanced Maintenance &
+                                                    Reliability Excellence</h4>
+                                                <p class="card-text">With supporting text below as a natural lead-in to
+                                                    additional content.</p>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card">
+                                            <img class="img-fluid" alt="100%x280"
+                                                src="https://www.kpmlearnings.com/wp-content/uploads/2019/11/liquidity-risk-management-training-1130x650.jpg">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Virtual Course for ILAAP & Liquidity Risk
+                                                    Management</h4>
+                                                <p class="card-text">With supporting text below as a natural lead-in to
+                                                    additional content.</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card">
+                                            <img class="img-fluid" alt="100%x280"
+                                                src="https://www.kpmlearnings.com/wp-content/uploads/2019/11/pass-training-event-1130x650.jpg">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Online Live Process Analyzers & Sampling Systems
+                                                    (PASS) Program</h4>
+                                                <p class="card-text">With supporting text below as a natural lead-in to
+                                                    additional content.</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card">
+                                            <img class="img-fluid" alt="100%x280"
+                                                src="https://www.kpmlearnings.com/wp-content/uploads/2019/11/hr-business-profession-training-program-1130x650.jpg">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Live Online Program on HR Business Partner
+                                                    Professional</h4>
+                                                <p class="card-text">With supporting text below as a natural lead-in to
+                                                    additional content.</p>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card">
+                                            <img class="img-fluid" alt="100%x280"
+                                                src="https://www.kpmlearnings.com/wp-content/uploads/2019/11/supply-chain-management-training-program-1130x650.jpg">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Certified Supply Chain Professional (CSCP) Online
+                                                    Training</h4>
+                                                <p class="card-text">With supporting text below as a natural lead-in to
+                                                    additional content.</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card">
+                                            <img class="img-fluid" alt="100%x280"
+                                                src="https://www.kpmlearnings.com/wp-content/uploads/2018/11/CISSP-KPM-1130x650.jpg">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Virtual Live CISSP Training Program</h4>
+                                                <p class="card-text">With supporting text below as a natural lead-in to
+                                                    additional content.</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouelmain"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouelmain"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+    </section>
+
+    <div class="d-flex justify-content-center pt-5 pb-3">
+        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" class="btn btn-warning btn-lg text-light ">View More Events</button>
+    
+
     </div>
-   <!-- slid show effect "carousel" -->
 
+      <!-- off-canvas -->
 
-   <!-- cards -->
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">About Us</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div>
+            KPM Learning Solutions is a leading provider of high quality public education courses, training programs, E-learning & custom In House workshops.
 
-  <div class="d-flex justify-content-center pt-5 pb-5">
-    <h2 class="text-secondary-emphasis display-6 fw-bold">Upcoming <span class="text-warning">Events</span></h2>
-  </div>
-   
-
-     <!-- cards -->
-
-
-     <section class="pt-5 pb-5">
-      <div class="container">
-          <div class="row">
-
-              <div class="col-6 text-right align-content-center">
-                  <a class="btn btn-warning mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
-                      <i class="fa fa-arrow-left"></i>
-                  </a>
-                  <a class="btn btn-warning mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
-                      <i class="fa fa-arrow-right"></i>
-                  </a>
-              </div>
-              <div class="col-12">
-                  <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
-  
-                      <div class="carousel-inner">
-                          <div class="carousel-item active">
-                              <div class="row">
-  
-                                  <div class="col-md-4 mb-3">
-                                      <div class="card">
-                                          <img class="img-fluid" alt="100%x280" src="https://www.kpmlearnings.com/wp-content/uploads/2019/11/maintenance-reliability-training-program-1130x650.jpg">
-                                          <div class="card-body">
-                                              <h4 class="card-title">Virtual Live Program on Advanced Maintenance & Reliability Excellence</h4>
-                                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-  
-                                          </div>
-  
-                                      </div>
-                                  </div>
-                                  <div class="col-md-4 mb-3">
-                                      <div class="card">
-                                          <img class="img-fluid" alt="100%x280" src="https://www.kpmlearnings.com/wp-content/uploads/2019/11/liquidity-risk-management-training-1130x650.jpg">
-                                          <div class="card-body">
-                                              <h4 class="card-title">Virtual Course for ILAAP & Liquidity Risk Management</h4>
-                                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-  
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="col-md-4 mb-3">
-                                      <div class="card">
-                                          <img class="img-fluid" alt="100%x280" src="https://www.kpmlearnings.com/wp-content/uploads/2019/11/pass-training-event-1130x650.jpg">
-                                          <div class="card-body">
-                                              <h4 class="card-title">Online Live Process Analyzers & Sampling Systems (PASS) Program</h4>
-                                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-  
-                                          </div>
-                                      </div>
-                                  </div>
-  
-                              </div>
-                          </div>
-                          <div class="carousel-item">
-                              <div class="row">
-  
-                                  <div class="col-md-4 mb-3">
-                                      <div class="card">
-                                          <img class="img-fluid" alt="100%x280" src="https://www.kpmlearnings.com/wp-content/uploads/2019/11/hr-business-profession-training-program-1130x650.jpg">
-                                          <div class="card-body">
-                                              <h4 class="card-title">Live Online Program on HR Business Partner Professional</h4>
-                                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-  
-                                          </div>
-  
-                                      </div>
-                                  </div>
-                                  <div class="col-md-4 mb-3">
-                                      <div class="card">
-                                          <img class="img-fluid" alt="100%x280" src="https://www.kpmlearnings.com/wp-content/uploads/2019/11/supply-chain-management-training-program-1130x650.jpg">
-                                          <div class="card-body">
-                                              <h4 class="card-title">Certified Supply Chain Professional (CSCP) Online Training</h4>
-                                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-  
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="col-md-4 mb-3">
-                                      <div class="card">
-                                          <img class="img-fluid" alt="100%x280" src="https://www.kpmlearnings.com/wp-content/uploads/2018/11/CISSP-KPM-1130x650.jpg">
-                                          <div class="card-body">
-                                              <h4 class="card-title">Virtual Live CISSP Training Program</h4>
-                                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-  
-                                          </div>
-                                      </div>
-                                  </div>
-  
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+        </div>
+          <div class="dropdown mt-3">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              Our Core Services
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Trainings</a></li>
+              <li><a class="dropdown-item" href="#">Conferences</a></li>
+              <li><a class="dropdown-item" href="#">Webinars</a></li>
+            </ul>
           </div>
+        </div>
       </div>
-  </section> 
-        <!-- cards -->
+    
+    <!-- off-canvas -->
+
+    <!-- cards -->
+
+
+    <!-- section-3 -->
+
+    <section class="container pt-lg-5 g-lg-5">
+
+        <div class="row justify-content-center gap-4">
+            <div class="card my-sm-4 g-lg-4" style="width: 25rem;">
+                <div>
+                    <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="UPCOMING EVENTS">
+                        <img src="https://www.kpmlearnings.com/wp-content/uploads/2018/11/venue-8.jpg"
+                        class="card-img-top opacity-75" alt="..."> 
+                        
+                <div class="card-body card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title text-dark fw-bold">UPCOMING EVENTS</h5>
+
+                    </span>
+                </div>
+
+                </div>
+            </div>
+
+            <div class="card my-sm-4 g-lg-4" style="width: 25rem;">
+                <div>
+                    <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="FEATURED EVENTS">
+                        <a href="#"><img src="https://www.kpmlearnings.com/wp-content/uploads/2018/11/venue-8.jpg"
+                            class="card-img-top opacity-75" alt="..."> </a>
+                    <div class="card-body card-img-overlay d-flex d-flex justify-content-center align-items-center">
+                        <h5 class="card-title text-dark fw-bold">FEATURED EVENTS</h5>
+
+                    </span>
+                </div>
+                
+                </div>
+            </div>
+
+            <div class="card my-sm-4 g-lg-4" style="width: 25rem;">
+
+                <div>
+                    <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="PAST EVENTS">
+                        <a href="#"><img src="https://www.kpmlearnings.com/wp-content/uploads/2018/11/venue-8.jpg"
+                            class="card-img-top opacity-75" alt="..."></a>
+                    <div class="card-body card-img-overlay d-flex d-flex justify-content-center align-items-center">
+                        <h5 class="card-title text-dark fw-bold">PAST EVENTS</h5>
+
+
+                    </span>
+
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- section-3 -->
+
+
+<!-- section-4 -->
+
+<section class="bg-light"> 
+
+    <div class="container">
+
+        <div>
+
+            <div class="d-flex justify-content-center pt-5 pb-5">
+                <h2 class="text-secondary-emphasis display-6 fw-bold">Schedule <span class="text-warning">Meeting With US</span></h2>
+            </div>
+
+            <div class="d-flex justify-content-center pb">
+                <p>Pick a time & the event, We make it easy to get started
+                </p>
+            </div>
+
+            <div class="d-flex justify-content-center pt-5 pb-5">   
+                <img src="./images/Screenshot 2023-08-11 112718.png" class="img-fluid" alt="">
+            </div>
+
+            
+
+
+        </div>
+
+    </div>
+
+
+
+</section>
+
+<!-- section-4 -->
+
+<!-- section5 -->
+
+<div class="gap-5 d-flex justify-content-center align-items-center pt-5">
+    <div class="">
+        <button style="height: 100px; width: 100px;" type="button" class="btn btn-outline-warning rounded-circle">250</button>
+        <p class="text-warning ps-3">Events</p>
+
+    </div>
+    <div class="">
+        <button style="height: 100px; width: 100px;" type="button" class="btn btn-outline-warning rounded-circle">189</button>
+        <p class="text-warning ps-3">Venues</p>
+
+    </div>
+
+    <div class="">
+        <button style="height: 100px; width: 100px;" type="button" class="btn btn-outline-warning rounded-circle">1881</button>
+        <p class="text-warning ps-3">Participants</p>
+
+    </div>
+
+    <div class="">
+        <button style="height: 100px; width: 100px;" type="button" class="btn btn-outline-warning rounded-circle">90</button>
+        <p class="text-warning ps-3">Countries</p>
+
+    </div>
+
+    <div class="">
+        <button style="height: 100px; width: 100px;" type="button" class="btn btn-outline-warning rounded-circle">3050</button>
+        <p class="text-warning ps-3">Members</p>
+
+    </div>
+
+    <div class="">
+        <button style="height: 100px; width: 100px;" type="button" class="btn btn-outline-warning rounded-circle">155</button>
+        <p class="text-warning ps-3">Sponsors</p>
+
+    </div>
+
+
+
+</div>
+
+
+<!-- section5 -->
+
+<!-- section 6 -->
+
+
+<div class="container mt-5 bg-light">
+    <h2 class="text-center mb-4">Delegate <span class="text-warning">Testimonials</span></h2>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#testimonialCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#testimonialCarousel" data-slide-to="1"></li>
+                    <li data-target="#testimonialCarousel" data-slide-to="2"></li>
+                    <li data-target="#testimonialCarousel" data-slide-to="3"></li>
+                    <li data-target="#testimonialCarousel" data-slide-to="4"></li>
+                    <li data-target="#testimonialCarousel" data-slide-to="5"></li>
+                    
+                    <!-- Add more indicators for additional testimonials -->
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="testimonial-card">
+                            <img src="https://www.kpmlearnings.com/wp-content/uploads/2019/10/abdulrahman-al-kadi-150x150.jpg" alt="Delegate 0" class="img-fluid rounded-circle mb-3">
+                            <p class="mb-2">
+                                "I had the privilege of being a delegate at the recent training CISSP, and I must say it was an exceptional experience..."
+                            </p>
+                            <p class="text-muted">Abdul Rahman Al Kadi, IT Head Banque Saudi Fransi</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-card">
+                            <img src="https://www.kpmlearnings.com/wp-content/uploads/2019/10/vikas-sawhney-150x150.jpg" alt="Delegate 1" class="img-fluid rounded-circle mb-3">
+                            <p class="mb-2">
+                                "The IRRBB training program exceeded my expectations. The quality of the Trainer and the networking opportunities were outstanding..."
+                            </p>
+                            <p class="text-muted">Vikas Sawhney, Group Head Operational Risk, Barwa Bank</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-card">
+                            <img src="https://www.kpmlearnings.com/wp-content/uploads/2019/10/david-khalil-gdi-150x150.jpg" alt="Delegate 2" class="img-fluid rounded-circle mb-3">
+                            <p class="mb-2">
+                                "The conference exceeded my expectations. The quality of speakers and the networking opportunities were outstanding..."
+                            </p>
+                            <p class="text-muted">David Khalil, IT Head, GDI, Qatar</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-card">
+                            <img src="https://www.kpmlearnings.com/wp-content/uploads/2019/10/review-jabar.jpg" alt="Delegate 3" class="img-fluid rounded-circle mb-3">
+                            <p class="mb-2">
+                                "Thank you KPM Group for this fantastic opportunity to attend the ASQ-CRE certificatian"
+                            </p>
+                            <p class="text-muted">Jaber Barber, Head of Reliability</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="testimonial-card">
+                            <img src="https://www.kpmlearnings.com/wp-content/uploads/2019/10/biju-vasavan-150x150.jpg" alt="Delegate 4" class="img-fluid rounded-circle mb-3">
+                            <p class="mb-2">
+                                "KPM Groups, CMRP certification program is an outstanding opportunity for those who are eagerly geting certified from SMRP Board"
+                            </p>
+                            <p class="text-muted">Biju Vasavan, Reliability Manager at Aramco </p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="testimonial-card">
+                            <img src="https://www.kpmlearnings.com/wp-content/uploads/2019/10/yousof-almudawah-150x150.jpg" alt="Delegate 5" class="img-fluid rounded-circle mb-3">
+                            <p class="mb-2">
+                                "I have certified CAMA, CRE and CMRP by KPM Group, such an experineced trainers & quality training with 100% passing ratio"
+                            </p>
+                            <p class="text-muted">Yousof Al-mudawah, Asset Integrity Manager, Qatar Enrgy</p>
+                        </div>
+                    </div>
+                    <!-- Add more carousel items for additional testimonials -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- section 6  -->
+
+
+<!-- section 7 -->
+
+<section class="all_section mt-5">
+
+    <div class="d-flex justify-content-center pt-5">
+        <h2 class="fw-bold text-light">Our Advisory<span class="text-warning fw-bold m-2">Partners</span></h2>
+    </div>
+    
+    <div class="container mt-5">
+        
+        <div class="trainer-container row">
+          <div class="trainer-card col-md-12 col-lg-6 col-xxl-3">
+            <img src="https://www.kpmlearnings.com/wp-content/uploads/2019/12/JOE-DESIMONE.jpg" class="card-img-top" alt="Card Image 1">
+            <h5 class="card-title">Dr. Joseph Robert DeSimone</h5>
+            <p class="card-text">TRAINER - OIL & GAS            </p>
+            <a href="#" class="btn btn-warning">Learn More</a>
+          </div>
+          <!-- Duplicate the image-card for additional cards -->
+          <div class="trainer-card col-md-12 col-lg-6 col-xxl-3">
+            <img src="https://www.kpmlearnings.com/wp-content/uploads/2018/11/george.jpg" class="card-img-top" alt="Card Image 2">
+            <h5 class="card-title">George Dobrea</h5>
+            <p class="card-text">EC-COUNCIL INSTRUCTOR</p>
+            <a href="#" class="btn btn-warning">Learn More</a>
+          </div>
+          <div class="trainer-card col-md-12 col-lg-6 col-xxl-3">
+            <img src="https://www.kpmlearnings.com/wp-content/uploads/2018/11/Patrick-982x1024.jpg" class="card-img-top" alt="Card Image 3">
+            <h5 class="card-title">Patrick McIlwee</h5>
+            <p class="card-text">TRAINER - CRISIS MANAGEMENT</p>
+            <a href="#" class="btn btn-warning">Learn More</a>
+          </div>
+          <div class="trainer-card col-md-12 col-lg-6 col-xxl-3">
+            <img src="https://www.kpmlearnings.com/wp-content/uploads/2018/11/Quaye-trainer.jpg" class="card-img-top" alt="Card Image 4">
+            <h5 class="card-title">Nii A. Quaye</h5>
+            <p class="card-text">CUSTOMER CENTRICITY TRAINER</p>
+            <a href="#" class="btn btn-warning">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+</section>
+
+
+
+
+
+<!-- section 7 -->
+
+<!-- section 8 -->
+
+<section>
+    <div>
+        <div class="d-flex justify-content-center pt-5">
+            <h2 class="text-dark fw-bold">Our <span class="text-warning fw-bold">Clients</span> </h2>
+        </div>
+
+        <ul class="list-unstyled d-flex justify-content-center pb-5 pt-5">
+            <li><a href=""><img src="https://www.kpmlearnings.com/wp-content/uploads/2019/10/sabic-client-kpm.png" alt=""></a></li>
+            <li><a href=""><img src="https://www.kpmlearnings.com/wp-content/uploads/2019/10/isdb-client.jpg" alt=""></a></li>
+            <li><a href=""><img src="https://www.kpmlearnings.com/wp-content/uploads/2019/10/sadara-client.jpg" alt=""></a></li>
+            <li><a href=""><img src="https://www.kpmlearnings.com/wp-content/uploads/2019/10/baherain-mumtalakat-holding.png" alt=""></a></li>
+            <li><a href=""><img src="https://www.kpmlearnings.com/wp-content/uploads/2019/10/saudi-aramco-client.png" alt=""></a></li>
+            <li><a href=""><img src="https://www.kpmlearnings.com/wp-content/uploads/2019/10/orpic-client-kpm.png" alt=""></a></li>
+
+        </ul>
+
+    </div>
+</section>
+
+
+<!-- section 8 -->
+
+
+<!-- Footer section -->
+
+<section>
+    
+      <!-- Footer section -->
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            
+            <div class="col-md-6">
+                <h2>Office Address</h2>
+                <p>Head Office : 3rd Floor, LV Complex, Koramangala 7th Block , Bengaluru - India</p>
+                <p>Regional Office : 1st floor, Office No. 107, PANESARS Centre, Mombasa Road, 45494 – 00100, Nairobi - Kenya
+                </p>
+              <h2>Contact Us</h2>
+              <p>Email: shanis@kpmlearnings.com</p>
+              <p>Phone: +91 8129552574</p>
+            </div>
+
+
+
+
+
+            <div class="col-md-6">
+              <h2 class="footer_request">Request a Call Back</h2>
+              <form class="footer-form">
+                <div class="mb-3">
+                  <input type="text" class="form-control" placeholder="Your Name">
+                </div>
+                <div class="mb-3">
+                  <input type="email" class="form-control" placeholder="Your Email">
+                </div>
+                <div class="mb-3">
+                    <input type="number" class="form-control" placeholder="Your Number">
+                  </div>
+                <div class="mb-3">
+                  <textarea class="form-control" rows="3" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-warning">Submit</button>
+              </form>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <a href="#" class="btn btn-social-icon btn-twitter btn-warning"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="btn btn-social-icon btn-facebook btn-warning"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="btn btn-social-icon btn-instagram btn-warning"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+</section>
+
+
+
+<!-- Footer section -->
 
 
 
@@ -271,16 +779,23 @@
 
 
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+        <script>
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
-
-
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+ 
 </body>
+
 </html>
